@@ -26,6 +26,11 @@ public class Relationship: Codable {
     /// Whether the user is currently blocking the user's domain.
     public let domainBlocking: Bool
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case following

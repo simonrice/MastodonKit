@@ -20,6 +20,11 @@ public class Notification: Codable {
     /// The Status associated with the notification, if applicable.
     public let status: Status?
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case type

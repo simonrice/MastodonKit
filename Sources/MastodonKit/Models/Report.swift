@@ -14,6 +14,11 @@ public class Report: Codable {
     /// The action taken in response to the report.
     public let actionTaken: String
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case actionTaken = "action_taken"

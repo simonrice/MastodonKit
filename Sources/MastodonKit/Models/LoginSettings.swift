@@ -24,6 +24,11 @@ public class LoginSettings: Codable {
             .compactMap(toAccessScope)
     }
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
         case accessTokenType = "token_type"

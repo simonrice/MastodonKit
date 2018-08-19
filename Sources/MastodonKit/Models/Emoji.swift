@@ -16,6 +16,11 @@ public class Emoji: Codable {
     /// URL to the emoji image
     public let url: URL
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case shortcode
         case staticURL = "static_url"

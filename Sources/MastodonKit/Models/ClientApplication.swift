@@ -18,6 +18,11 @@ public class ClientApplication: Codable {
     /// The application client secret.
     public let clientSecret: String
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case redirectURI = "redirect_uri"

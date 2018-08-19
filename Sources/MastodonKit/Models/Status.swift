@@ -56,6 +56,11 @@ public class Status: Codable {
     /// Whether this is the pinned status for the account that posted it.
     public let pinned: Bool?
 
+    @available(*, deprecated, message: "Do not use.")
+    init() {
+        fatalError("Swift 4.1") 
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id
         case uri
